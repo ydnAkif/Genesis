@@ -1,5 +1,13 @@
 # Genesis
 
+![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)
+
+![CMake](https://img.shields.io/badge/CMake-3.22+-brightgreen.svg)
+
+![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange.svg)
+
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
 > Building a Transformer-based Language Model from Scratch in Modern C++20
 
 Genesis is an educational project whose goal is **not** to compete with existing Large Language Models such as ChatGPT,
@@ -13,6 +21,20 @@ Performance is **not** the primary objective.
 Understanding the architecture is.
 
 ---
+
+# Why Genesis?
+
+Most open-source LLM projects focus on performance.
+
+Genesis focuses on understanding.
+
+Instead of hiding complexity behind machine learning frameworks,
+
+every important component is implemented manually and explained in detail.
+
+The objective is to understand how a Transformer actually works,
+
+one component at a time.
 
 ## Philosophy
 
@@ -138,20 +160,15 @@ Genesis/
 ├── include/
 ├── src/
 ├── tests/
-├── cmake/
 ├── CMakeLists.txt
 └── README.md
 ```
 
 ---
 
-# Current Status
+# Project Status
 
-Current version:
-
-```
-v0.1.0
-```
+Current Version: **v0.1.0**
 
 Implemented:
 
@@ -173,7 +190,28 @@ willing to study the source code.
 The repository should eventually become a complete educational reference for building a Transformer-based language model
 from scratch in modern C++.
 
+The ultimate goal of Genesis is not only to build a language model, but also to document every step of the journey so
+that anyone can understand how modern LLMs work internally.
+
 ---
+
+# Future Plans
+
+- CPU optimization
+
+- SIMD support
+
+- Multithreading
+
+- Metal backend (Apple Silicon)
+
+- CUDA backend
+
+- Model serialization
+
+- Inference engine
+
+- Quantization
 
 # License
 
