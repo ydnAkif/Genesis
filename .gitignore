@@ -1,0 +1,21 @@
+
+# Build
+
+build/
+
+# CLion
+
+.idea/
+
+# macOS
+
+.DS_Store
+
+# CMake
+
+cmake-build-*/
+
+# Temporary
+
+*.swp
+
