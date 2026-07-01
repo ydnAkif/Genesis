@@ -34,3 +34,17 @@ target_include_directories(genesis_core PUBLIC ${PROJECT_INCLUDE_DIR})
 add_executable(genesis_app ${PROJECT_SOURCES})
 
 target_link_libraries(genesis_app PRIVATE genesis_core)
+
+enable_testing()
+
+add_executable(genesis_tests
+
+        tests/TokenizerTests.cpp)
+
+target_link_libraries(genesis_tests
+
+        PRIVATE
+
+        genesis_core)
+
+add_test(NAME genesis_tests COMMAND genesis_tests)
