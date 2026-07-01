@@ -1,9 +1,14 @@
+//
+// Created by Akif AYDIN on 28.06.2026.
+//
+
 #include <genesis/text/Tokenizer.hpp>
 
 #include <sstream>
 
 namespace genesis::text {
-    namespace {
+    // Give a a name
+    namespace  {
         char to_lower_ascii(const char character) {
             return static_cast<char>(
                 std::tolower(static_cast<unsigned char>(character))

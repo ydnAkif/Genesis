@@ -2,7 +2,7 @@
 
 ![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)
 
-![CMake](https://img.shields.io/badge/CMake-3.22+-brightgreen.svg)
+![CMake](https://img.shields.io/badge/CMake-4.2+-brightgreen.svg)
 
 ![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange.svg)
 
