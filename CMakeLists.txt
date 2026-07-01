@@ -43,3 +43,12 @@ target_link_libraries(vocabulary_tests
         genesis_core)
 
 add_test(NAME vocabulary_tests COMMAND vocabulary_tests)
+
+add_executable(text_pipeline_tests
+        tests/TextPipelineTests.cpp)
+
+target_link_libraries(text_pipeline_tests
+        PRIVATE
+        genesis_core)
+
+add_test(NAME text_pipeline_tests COMMAND text_pipeline_tests)
