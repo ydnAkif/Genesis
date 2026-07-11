@@ -2,7 +2,7 @@
 
 ![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)
 
-![CMake](https://img.shields.io/badge/CMake-4.2+-brightgreen.svg)
+![CMake](https://img.shields.io/badge/CMake-3.20+-brightgreen.svg)
 
 ![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange.svg)
 
@@ -92,7 +92,7 @@ GPU acceleration (Metal, CUDA, Vulkan, etc.) may be added in later stages.
 - [x] Version system
 - [x] Basic executable
 - [x] Initial Tokenizer
-- [ ] Unit testing infrastructure
+- [x] Unit testing infrastructure
 
 ---
 

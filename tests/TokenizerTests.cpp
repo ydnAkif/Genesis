@@ -65,5 +65,24 @@ int main() {
         "lowercase ascii tokens"
     );
 
+    expect_equal(
+        tokenizer.tokenize("hello, world!"),
+        {"hello,", "world!"},
+        "without split_punctuation punctuation stays attached"
+    );
+
+    const genesis::text::Tokenizer punctuation_tokenizer{
+        genesis::text::TokenizerConfig{
+            .lowercase = true,
+            .split_punctuation = true
+        }
+    };
+
+    expect_equal(
+        punctuation_tokenizer.tokenize("Hello, world!"),
+        {"hello", ",", "world", "!"},
+        "split punctuation into separate tokens"
+    );
+
     return 0;
 }

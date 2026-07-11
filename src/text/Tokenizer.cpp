@@ -4,7 +4,7 @@
 
 #include <genesis/text/Tokenizer.hpp>
 
-#include <sstream>
+#include <cctype>
 
 namespace genesis::text {
     namespace {
@@ -29,17 +29,39 @@ namespace genesis::text {
 
     std::vector<std::string> Tokenizer::tokenize(const std::string &text) const {
         std::vector<std::string> tokens;
-
-        std::istringstream stream{text};
         std::string token;
 
-        while (stream >> token) {
+        const auto flush_token = [&]() {
+            if (token.empty()) {
+                return;
+            }
+
             if (config_.lowercase) {
                 token = to_lower_ascii(token);
             }
 
             tokens.push_back(token);
+            token.clear();
+        };
+
+        for (const char character: text) {
+            const auto unsigned_character = static_cast<unsigned char>(character);
+
+            if (std::isspace(unsigned_character)) {
+                flush_token();
+                continue;
+            }
+
+            if (config_.split_punctuation && std::ispunct(unsigned_character)) {
+                flush_token();
+                tokens.emplace_back(1, character);
+                continue;
+            }
+
+            token.push_back(character);
         }
+
+        flush_token();
 
         return tokens;
     }
