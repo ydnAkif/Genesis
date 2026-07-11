@@ -1,7 +1,6 @@
 #include <genesis/text/Tokenizer.hpp>
 #include <genesis/text/Vocabulary.hpp>
 
-#include <cstdlib>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -19,7 +18,7 @@ namespace {
 }
 
 int main() {
-    genesis::text::Tokenizer tokenizer{
+    const genesis::text::Tokenizer tokenizer{
         genesis::text::TokenizerConfig{
             .lowercase = true
         }

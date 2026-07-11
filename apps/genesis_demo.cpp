@@ -10,13 +10,13 @@ int main() {
         }
     };
 
-    auto tokens = tokenizer.tokenize("Hello World Hello");
+    const auto tokens = tokenizer.tokenize("Hello World Hello");
 
     genesis::text::Vocabulary vocabulary;
 
     vocabulary.learn(tokens);
 
-    auto ids = vocabulary.encode(tokens);
+    const auto ids = vocabulary.encode(tokens);
 
     std::cout << "Tokens\n";
 
@@ -25,6 +25,6 @@ int main() {
 
     std::cout << "\nIds\n";
 
-    for (auto id: ids)
+    for (const auto id: ids)
         std::cout << id << '\n';
 }

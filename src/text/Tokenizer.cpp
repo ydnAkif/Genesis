@@ -7,8 +7,7 @@
 #include <sstream>
 
 namespace genesis::text {
-    // Give a a name
-    namespace  {
+    namespace {
         char to_lower_ascii(const char character) {
             return static_cast<char>(
                 std::tolower(static_cast<unsigned char>(character))
